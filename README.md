@@ -514,42 +514,7 @@ You have a working React component that manages three different types of state, 
 - Use your `Status` union type for the status state
 - Use your `Task` interface as an array type for the tasks
 
-**What You'll Practice**:
-
-- Simple state types (number)
-- Union types for restricted values
-- Interface types for objects
-- Array types with typed elements
-
 This covers the three most important state typing patterns you'll use in React with TypeScript!
-
-### Common State Management Mistakes
-
-```typescript
-// ❌ DON'T: Mutate state directly
-const [items, setItems] = useState<string[]>([])
-items.push("new item") // This mutates state!
-
-// ✅ DO: Create new arrays/objects
-setItems((prev) => [...prev, "new item"])
-
-// ❌ DON'T: Use 'any' to avoid type errors
-const [data, setData] = useState<any>({})
-
-// ✅ DO: Define proper interfaces
-interface Data {
-  id: string
-  value: number
-}
-const [data, setData] = useState<Data>({ id: "", value: 0 })
-
-// ❌ DON'T: Forget to handle undefined/null
-const [user, setUser] = useState<User | null>(null)
-console.log(user.name) // Runtime error if user is null
-
-// ✅ DO: Use optional chaining and nullish coalescing
-console.log(user?.name ?? "No user")
-```
 
 ---
 
