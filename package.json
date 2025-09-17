@@ -1,0 +1,40 @@
+{
+  "name": "pca_typescript_react_lab",
+  "version": "1.0.0",
+  "description": "A TypeScript React lab with a space exploration theme. Learn to build typed React components for your next galactic adventure!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "lab",
+    "mocha",
+    "chai",
+    "space",
+    "components"
+  ],
+  "scripts": {
+    "test": "tsc --noEmit && mocha -r ts-node/register 'test/**/*.test.ts' -b"
+  },
+  "author": "Mike",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "@types/jsdom": "^21.1.7",
+    "@types/mocha": "^10.0.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "chai": "^4.5.0",
+    "chai_typescript_type_annotation_tests": "^1.1.4",
+    "jsdom": "^25.0.1",
+    "mocha": "^10.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
