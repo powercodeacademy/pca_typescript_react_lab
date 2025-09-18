@@ -4,25 +4,33 @@ import React, { useState } from "react"
 // TODO: Create a union type called Status with values: "idle" | "loading" | "success" | "error"
 // TODO: Create an interface called Task with: id (string), title (string), completed (boolean)
 
+type Status = "idle" | "loading" | "success" | "error"
+
+interface Task {
+  id: string
+  title: string
+  completed: boolean
+}
+
 export function TaskManager() {
   // Step 2: Add TypeScript types to these useState hooks
 
   // TODO: Add explicit type annotation - this should be useState<number>
-  const [taskCount, setTaskCount] = useState(0)
+  const [taskCount, setTaskCount] = useState<number>(0)
 
   // TODO: Add type annotation using your Status union type
-  const [status, setStatus] = useState("idle")
+  const [status, setStatus] = useState<Status>("idle")
 
   // TODO: Add type annotation using your Task interface as an array
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState<Task[]>([])
 
   // Helper functions (already properly typed - don't change these)
   const incrementCount = (): void => {
-    setTaskCount((prev) => prev + 1)
+    setTaskCount(prev => prev + 1)
   }
 
   const updateStatus = (newStatus: string): void => {
-    setStatus(newStatus as any) // This will be type-safe once you add the proper type above
+    setStatus(newStatus as Status)
   }
 
   const addTask = (): void => {
@@ -31,7 +39,7 @@ export function TaskManager() {
       title: `Task ${tasks.length + 1}`,
       completed: false,
     }
-    setTasks((prev) => [...prev, newTask])
+    setTasks(prev => [...prev, newTask])
   }
 
   const toggleTask = (id: string): void => {
