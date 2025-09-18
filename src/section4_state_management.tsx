@@ -18,7 +18,7 @@ export function TaskManager() {
 
   // Helper functions (already properly typed - don't change these)
   const incrementCount = (): void => {
-    setTaskCount((prev) => prev + 1)
+    setTaskCount(prev => prev + 1)
   }
 
   const updateStatus = (newStatus: string): void => {
