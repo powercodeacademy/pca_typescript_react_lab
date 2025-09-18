@@ -1,10 +1,5 @@
 import React from "react"
 
-// TODO: Add a TypeScript interface for SpaceshipStatus props
-// The component expects: name (string), fuel (number), isOperational (boolean)
-// 1. Create an interface called SpaceshipStatusProps
-// 2. Add the interface as the type for the props parameter
-
 interface SpaceshipStatusProps {
   name: string,
   fuel: number,
@@ -22,10 +17,6 @@ export function SpaceshipStatus(props: SpaceshipStatusProps) {
     </div>
   )
 }
-
-// TODO: Add TypeScript typing to MissionBrief
-// This component takes no props, but should be properly typed
-// Convert it to use proper TypeScript function component typing
 
 export const MissionBrief: React.FC = () => {
   return (
